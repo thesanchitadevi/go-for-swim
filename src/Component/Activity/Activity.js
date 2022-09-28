@@ -1,5 +1,4 @@
 import React from 'react';
-import Title from '../Title/Title';
 
 const Activity = (props) => {
     // console.log(props.activity);
@@ -15,7 +14,7 @@ const Activity = (props) => {
                     <h2 className="card-title font-bold">{name}</h2>
                     <p>{details.slice(0,75)+'...'}</p>
                     <p className='font-medium'>Age Limit: {age}</p>
-                    <p className='font-medium'>Time Required: {time}</p>
+                    <p className='font-medium'>Time Required: {time}s</p>
                     <div className="card-actions">
                         <button className="btn bg-blue-500 hover:bg-blue-600 border-none px-16">
                             Add to List</button>
