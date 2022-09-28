@@ -2,6 +2,7 @@ import React from 'react';
 import img from '../../image/woman.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import ExerciseDetails from '../ExerciseDetails/ExerciseDetails';
 
 const Details = () => {
     return (
@@ -15,7 +16,7 @@ const Details = () => {
                 </div>
             </div>
 
-            <div className='flex mt-10'>
+            <div className='flex my-10 '>
                 <div className='px-4 text-center'>
                     <h1 className='text-xl font-semibold'>50<small className='text-gray-400'>kg</small></h1>
                     <h1 className='font-medium'>Weight</h1>
@@ -30,12 +31,20 @@ const Details = () => {
                 </div>
             </div>
 
-
             {/* break */}
-            <div>
-                <h1>Add a break</h1>
+            <div className='my-8'>
+                <h1 className='text-xl font-semibold my-8'>Add a break</h1>
+                <div className='flex text-center '>
+                    <button className='font-medium bg-sky-100 rounded-full p-2 mr-3'>10s</button>
+                    <button className='font-medium bg-sky-100 rounded-full p-2 mr-3'>20s</button>
+                    <button className='font-medium bg-sky-100 rounded-full p-2 mr-3'>30s</button>
+                    <button className='font-medium bg-sky-100 rounded-full p-2 mr-3'>40s</button>
+                    <button className='font-medium bg-sky-100 rounded-full p-2'>50s</button>
+                </div>
             </div>
 
+            {/* Exercise Details */}
+            <ExerciseDetails></ExerciseDetails>
         </div>
     );
 };
