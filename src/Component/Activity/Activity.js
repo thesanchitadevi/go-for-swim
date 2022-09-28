@@ -1,17 +1,25 @@
 import React from 'react';
-import Exercises from '../Exercises/Exercises';
 import Title from '../Title/Title';
 
-const Activity = () => {
+const Activity = (props) => {
+    // console.log(props.activity);
+    const { activity, setActivity } = props
+    const { name, details, age, img, time} = activity;
     return (
-        <div className='my-10'>
-            <Title></Title>
-            <div className='grid grid-cols-4 border border-red-600'>
-                <div className='grid col-span-3 grid-cols-3 border border-blue-600 w-10/12 mx-auto'>
-                    <Exercises></Exercises>
-                </div>
-                <div className='grid col-span-1'>
-                    <h1 className='text-4xl text-orange-400 font-bold'>activity count</h1>
+        <div>
+            <div className="card w-74 h-100 bg-base-100 shadow-xl">
+                <figure className="px-10 pt-10">
+                    <img style={{height:'120px', width:'200px'}} src={img} alt="Shoes" className="rounded-xl" />
+                </figure>
+                <div className="card-body">
+                    <h2 className="card-title font-bold">{name}</h2>
+                    <p>{details.slice(0,75)+'...'}</p>
+                    <p className='font-medium'>Age Limit: {age}</p>
+                    <p className='font-medium'>Time Required: {time}</p>
+                    <div className="card-actions">
+                        <button className="btn bg-blue-500 hover:bg-blue-600 border-none px-16">
+                            Add to List</button>
+                    </div>
                 </div>
             </div>
         </div>

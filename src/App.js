@@ -1,11 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
-import Activity from './Component/Activity/Activity';
+import Activities from './Component/Activities/Activities';
 
 function App() {
   return (
     <div >
-      <Activity></Activity>
+      <Activities></Activities>
     </div>
   );
 }
