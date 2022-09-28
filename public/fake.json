@@ -1,0 +1,50 @@
+[
+    {
+        "id": "0001",
+        "name": "Freestyle",
+        "details": "Freestyle means that in an event so designated the swimmer may swim any style",
+        "age": "10-15",
+        "img": "http://www.nataswim.info/media/k2/items/cache/68b62085e41e8f225811766f8d5eb2bb_L.jpg",
+        "time": "20"
+    },
+    {
+        "id": "0002",
+        "name": "Front Crawl",
+        "details": "When swimming the front crawl, your body is facing down in the water.",
+        "age": "15-20",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Incheon_AsianGames_Swimming_19_%2815178565298%29.jpg/1024px-Incheon_AsianGames_Swimming_19_%2815178565298%29.jpg",
+        "time": "22"
+    },
+    {
+        "id": "0003",
+        "name": "Backstroke",
+        "details": "BackStroke is a swimming stroke executed on the back and usually consisting of alternating circular arm pulls and a flutter kick",
+        "age": "15-25",
+        "img": "https://swimjim.com/wp-content/uploads/2019/11/backstroke-915x611.jpg",
+        "time": "25"
+    },
+    {
+        "id": "0004",
+        "name": "Breaststroke",
+        "details": "Breaststroke is a swimming stroke executed in a prone position by coordinating a kick in which the legs are brought forward with the knees together and the feet are turned outward and whipped back with a glide and a backward sweeping movement of the arms",
+        "age": "20-25",
+        "img": "https://www.yourswimlog.com/wp-content/uploads/2017/01/The-Breaststroke-Everything-You-Need-to-Know.jpg",
+        "time": "30"
+    },
+    {
+        "id": "0005",
+        "name": "Butterfly stroke",
+        "details": "Butterfly stroke is a swimming stroke performed face down, in which both arms are thrust out at the sides at the same time, brought forward out of the water and then down through the water in a circular motion, while using an up-and-down leg movement",
+        "age": "10-25",
+        "img": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/43/40._Schwimmzonen-_und_Mastersmeeting_Enns_2017_100m_Butterfly-9318.jpg/1024px-40._Schwimmzonen-_und_Mastersmeeting_Enns_2017_100m_Butterfly-9318.jpg",
+        "time": "25"
+    },
+    {
+        "id": "0006",
+        "name": "Sidestroke",
+        "details": "Sidestroke is a swimming stroke which is executed on the side and in which the arms are swept in separate strokes towards the feet and downward and the legs do a scissors kick.",
+        "age": "20-25",
+        "img": "https://swimjim.com/wp-content/uploads/2019/11/Side-Stroke-915x610.jpg",
+        "time": "15"
+    }
+]
