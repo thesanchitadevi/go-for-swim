@@ -1,9 +1,11 @@
 import React from 'react';
+import logo from '../../image/swimmer.png'
 
 const Title = () => {
     return (
-        <div className='w-10/12 mx-auto mt-10'>
-            <h1 className='text-4xl text-blue-400 font-semibold'>Go-For-Swim</h1>
+        <div className='flex w-10/12 mt-8'>
+            <img style={{height:'40px'}} src={logo} alt="" />
+            <h1 className='text-4xl text-sky-500 font-semibold px-5'>Go-For-Swim</h1>
         </div>
     );
 };

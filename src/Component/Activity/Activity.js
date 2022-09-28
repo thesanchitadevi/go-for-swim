@@ -3,7 +3,7 @@ import Title from '../Title/Title';
 
 const Activity = (props) => {
     // console.log(props.activity);
-    const { activity, setActivity } = props
+    const { activity, setActivity } = props;
     const { name, details, age, img, time} = activity;
     return (
         <div>

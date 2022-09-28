@@ -1,6 +1,7 @@
-import logo from './logo.svg';
+
 import './App.css';
 import Activities from './Component/Activities/Activities';
+
 
 function App() {
   return (

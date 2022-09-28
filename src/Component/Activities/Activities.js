@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Activity from '../Activity/Activity';
+import Details from '../Details/Details';
 import Title from '../Title/Title';
+
 
 const Activities = () => {
     const [activities, setActivities] = useState([]);
@@ -15,11 +17,12 @@ const Activities = () => {
 
     return (
         <div>
-            <Title></Title>
-            <h1 className='w-10/12 font-semibold text-xl mx-auto mt-8'>Select today’s exercise</h1>
-            <div className='grid grid-cols-4 border'>
-                <div className='grid col-span-3 grid-cols-3  w-10/12 mx-auto gap-4'>
-                    
+            <div className='grid grid-cols-4 '>
+                <div className='grid col-span-3 grid-cols-3  w-10/12 mx-auto gap-4'>           
+                    <div className='grid col-span-3 '>
+                        <Title></Title>
+                        <h1 className='w-10/12 font-semibold text-xl mt-8'>Select today’s exercise</h1>
+                    </div>
                     {
                         activities.map(activity => <Activity
                             key={activity.id}
@@ -27,8 +30,8 @@ const Activities = () => {
                         ></Activity>)
                     }
                 </div>
-                <div className='grid col-span-1'>
-                    <h1 className='text-4xl text-orange-400 font-bold'>activity count</h1>
+                <div className='grid'>
+                    <Details></Details>
                 </div>
             </div>
         </div>
