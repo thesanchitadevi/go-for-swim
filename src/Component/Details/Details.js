@@ -8,8 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Details = (props) => {
 
-
+    
     const { times } = props;
+    
     /* exercise time */
     let time = 0;
     for (const activity of times) {
@@ -23,6 +24,14 @@ const Details = (props) => {
             position: toast.POSITION.TOP_RIGHT
         });
     };
+
+    const[value,setValue]=useState([0])
+    // let value = 0
+    const handleClick = event => {
+        setValue(event.currentTarget.value);
+        // console.log(setvalue);
+    }
+    const numbers = [10, 20, 30, 40, 50];
 
     return (
         <div className='bg-gray-100 p-5 pt-10 shadow-xl mx-5 mt-5 border border-slate-400 rounded-lg items-center text-center'>
@@ -53,15 +62,12 @@ const Details = (props) => {
             {/* ----------------- Exercise Details */}
             {/* break */}
             <div className='my-8'>
-                <h1 className='text-xl font-semibold my-8'>Add a break</h1>
-               
-                    
+                <h1 className='text-xl font-semibold my-8'>Add a break</h1>                   
                 <div className='flex justify-center '>
-                    <button className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>10s</button>
-                    <button className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>20s</button>
-                    <button className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>30s</button>
-                    <button className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>40s</button>
-                    <button  className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2'>50s</button>
+                    {
+                        numbers.map(number => <button onClick={handleClick} value={number} className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>{number}s</button> )
+                    }
+                    
                 </div>
               
             </div>
@@ -71,13 +77,13 @@ const Details = (props) => {
                 {/* Exercise times */}
                 <h1 className='mt-8 mb-6 font-semibold text-xl'>Exercise Details</h1>
                 <div className='flex mb-5'>
-                    <h1 className='text-lg font-medium pr-2'>Exercise Time : <span className='text-center text-gray-600 font-normal pl-5'> {time} seconds</span></h1>
+                    <h1 className='text-lg font-medium pr-2'>Exercise Time : <span className='text-center text-gray-600 font-normal pl-5'> {time} min</span></h1>
                     {/* <input className='w-1/2 selection:border-none py-1 rounded text-center' type="text" placeholder='200 seconds' /> */}
                 </div>
 
                 {/* break time */}
                 <div className='flex my-5'>
-                    <h1 className='text-lg font-medium pr-2'>Break Time : <span className='text-center text-gray-600 font-normal pl-5'> {} seconds</span></h1>
+                    <h1 className='text-lg font-medium pr-2'>Break Time : <span className='text-center text-gray-600 font-normal pl-5'>{value} min</span></h1>
                     {/* <input className='w-1/2 border-none py-1 rounded text-center' type="text" placeholder='20 seconds' /> */}
                 </div>
 

@@ -9,6 +9,8 @@ const Activities = () => {
     const [times, setTimes] = useState([]);
 
 
+   
+
     useEffect(() => {
         fetch('activities.json')
             .then(res => res.json())
@@ -36,7 +38,7 @@ const Activities = () => {
                 </div>
                 <div className='grid'>
                        
-                    <Details times={times}></Details>
+                    <Details times={times} ></Details>
                 </div>
             </div>
         </div>
