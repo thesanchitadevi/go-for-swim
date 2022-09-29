@@ -24,8 +24,8 @@ const Activities = () => {
 
     return (
         <div>
-            <div className='grid grid-cols-4 '>
-                <div className='grid col-span-3 grid-cols-3  w-10/12 mx-auto gap-4'>           
+            <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 sm:overflow-hidden'>
+                <div className='grid lg:col-span-3 lg:grid-cols-3 md:col-span-2 sm:col-span-1 md:grid-cols-2 sm:grid-cols-1 w-10/12 mx-auto gap-4 items-center'>           
                     {
                         activities.map(activity => <Activity
                             key={activity.id}
