@@ -3,10 +3,7 @@ import React from 'react';
 const Activity = (props) => {
     // console.log(props.activity);
     const { activity, handleAddToDetails } = props;
-    const { name, details, age, img, time } = activity;
-    
-    
-    
+    const { name, details, age, img, time } = activity; 
     // console.log(times);
 
 
