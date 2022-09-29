@@ -31,11 +31,12 @@ const Activities = () => {
                             key={activity.id}
                             activity={activity}
                             handleAddToDetails={handleAddToDetails}
-                        ></Activity>)
-                    }
+                            ></Activity>)
+                        }
                 </div>
                 <div className='grid'>
-                    <Details times={times} ></Details>
+                       
+                    <Details times={times}></Details>
                 </div>
             </div>
         </div>

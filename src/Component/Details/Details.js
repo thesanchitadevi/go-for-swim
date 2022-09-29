@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import img from '../../image/woman.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
@@ -7,12 +7,13 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const Details = (props) => {
-   
+
+
     const { times } = props;
     /* exercise time */
     let time = 0;
     for (const activity of times) {
-        time = time +  activity.time;
+        time = time + activity.time;
 
     }
 
@@ -22,12 +23,12 @@ const Details = (props) => {
             position: toast.POSITION.TOP_RIGHT
         });
     };
- 
+
     return (
         <div className='bg-gray-100 p-5 pt-10 shadow-xl mr-5 border border-slate-400 rounded-lg'>
 
-            <div className='flex mt-20'>
-                <img style={{ borderRadius: '100%', backgroundColor: 'white' ,height:'52px'}} src={img} alt="" />
+            <div className='flex'>
+                <img style={{ borderRadius: '100%', backgroundColor: 'white', height: '52px' }} src={img} alt="" />
                 <div className='pl-2'>
                     <h1 className='text-xl font-semibold p-0 m-0'>Sanchita Devi</h1>
                     <h1 className="text-gray-400"><FontAwesomeIcon icon={faLocationDot}></FontAwesomeIcon> Dhaka ,Bangladesh</h1>
@@ -49,31 +50,38 @@ const Details = (props) => {
                 </div>
             </div>
 
-            
             {/* ----------------- Exercise Details */}
             {/* break */}
             <div className='my-8'>
                 <h1 className='text-xl font-semibold my-8'>Add a break</h1>
+               
+                    
                 <div className='flex text-center '>
                     <button className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>10s</button>
                     <button className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>20s</button>
                     <button className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>30s</button>
                     <button className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>40s</button>
-                    <button className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2'>50s</button>
+                    <button  className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2'>50s</button>
                 </div>
+              
             </div>
 
-            {/* Exercise times */}
             <div>
+
+                {/* Exercise times */}
                 <h1 className='mt-8 mb-6 font-semibold text-xl'>Exercise Details</h1>
                 <div className='flex mb-5'>
-                    <h1 className='text-lg font-medium pr-2'>Exercise Time : {time} seconds</h1>
+                    <h1 className='text-lg font-medium pr-2'>Exercise Time : <span className='text-center text-gray-600 font-normal pl-5'> {time} seconds</span></h1>
                     {/* <input className='w-1/2 selection:border-none py-1 rounded text-center' type="text" placeholder='200 seconds' /> */}
                 </div>
+
+                {/* break time */}
                 <div className='flex my-5'>
-                    <h1 className='text-lg font-medium pr-2'>Break Time : </h1>
-                    <input className='w-1/2 border-none py-1 rounded text-center' type="text" placeholder='20 seconds' />
+                    <h1 className='text-lg font-medium pr-2'>Break Time : <span className='text-center text-gray-600 font-normal pl-5'> {} seconds</span></h1>
+                    {/* <input className='w-1/2 border-none py-1 rounded text-center' type="text" placeholder='20 seconds' /> */}
                 </div>
+
+                {/* toast button */}
                 <button onClick={showToastMessage} className='text-center text-xl font-semibold bg-blue-400 hover:bg-blue-600 px-12 py-2 mt-5 rounded-md text-white'>Activity Completed</button>
                 <ToastContainer />
             </div>
