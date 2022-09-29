@@ -2,8 +2,14 @@ import React from 'react';
 
 const Activity = (props) => {
     // console.log(props.activity);
-    const { activity, setActivity } = props;
-    const { name, details, age, img, time} = activity;
+    const { activity, handleAddToDetails } = props;
+    const { name, details, age, img, time } = activity;
+    
+    
+    
+    // console.log(times);
+
+
     return (
         <div>
             <div className="card w-74 h-100 bg-base-100 shadow-xl">
@@ -16,7 +22,7 @@ const Activity = (props) => {
                     <p className='font-medium'>Age Limit: {age}</p>
                     <p className='font-medium'>Time Required: {time}s</p>
                     <div className="card-actions">
-                        <button className="btn bg-blue-500 hover:bg-blue-600 border-none px-16">
+                        <button onClick={()=>handleAddToDetails(activity)} className="btn bg-blue-500 hover:bg-blue-600 border-none px-16">
                             Add to List</button>
                     </div>
                 </div>

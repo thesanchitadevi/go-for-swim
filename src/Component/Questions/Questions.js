@@ -3,7 +3,7 @@ import React from 'react';
 const Questions = () => {
     return (
         <div className=' w-10/12 mx-auto my-10'>
-            <h1 className='text-2xl font-semibold'>Questions and Answers</h1>
+            <h1 className='text-2xl font-semibold text-center'>Questions and Answers</h1>
             {/* questios and answers */}
             <div className="collapse mt-10 rounded-md">
                 <input type="checkbox" className="peer" />
