@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import img from '../../image/woman.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
@@ -27,11 +27,18 @@ const Details = (props) => {
 
     const[value,setValue]=useState([0])
     // let value = 0
+
+    /* localstorage */
+    useEffect(() => {
+        localStorage.setItem('value', JSON.stringify(value));
+    }, [value]);
+
+    /* get break time */
+    const numbers = [10, 20, 30, 40, 50];
     const handleClick = event => {
         setValue(event.currentTarget.value);
-        // console.log(setvalue);
+        // console.log(setValue);
     }
-    const numbers = [10, 20, 30, 40, 50];
 
     return (
         <div className='bg-gray-100 p-5 pt-10 shadow-xl mx-5 mt-5 border border-slate-400 rounded-lg items-center text-center'>
