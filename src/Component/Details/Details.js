@@ -6,9 +6,7 @@ import { faLocationDot } from '@fortawesome/free-solid-svg-icons'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
-const Details = (props) => {
-
-    
+const Details = (props) => {   
     const { times } = props;
     
     /* exercise time */
@@ -25,23 +23,31 @@ const Details = (props) => {
         });
     };
 
-    const[value,setValue]=useState([0])
-    // let value = 0
+    /* local storage */
+    const [value, setValue] = useState(() => {
+        // getting stored value
+        const saved = localStorage.getItem("value");
+        const initialValue = JSON.parse(saved);
+        return initialValue || "";
+    });
 
-    /* localstorage */
     useEffect(() => {
         localStorage.setItem('value', JSON.stringify(value));
     }, [value]);
 
     /* get break time */
     const numbers = [10, 20, 30, 40, 50];
+   
     const handleClick = event => {
         setValue(event.currentTarget.value);
-        // console.log(setValue);
+
     }
 
+
+
+
     return (
-        <div className='bg-gray-100 p-5 pt-10 shadow-xl mx-5 mt-5 border border-slate-400 rounded-lg items-center text-center'>
+        <div className=' p-5 pt-10 shadow-xl mx-3 bg-slate-100  mt-5 rounded-lg '>
 
             <div className='flex justify-center'>
                 <img style={{ borderRadius: '100%', backgroundColor: 'white', height: '52px' }} src={img} alt="" />
@@ -72,7 +78,9 @@ const Details = (props) => {
                 <h1 className='text-xl font-semibold my-8'>Add a break</h1>                   
                 <div className='flex justify-center '>
                     {
-                        numbers.map(number => <button onClick={handleClick} value={number} className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>{number}s</button> )
+                        numbers.map(number => <button
+                           
+                        onClick={handleClick} value={number} className='font-medium bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>{number}s</button>)
                     }
                     
                 </div>
@@ -95,7 +103,7 @@ const Details = (props) => {
                 </div>
 
                 {/* toast button */}
-                <button onClick={showToastMessage} className='text-center text-lg font-semibold bg-blue-400 hover:bg-blue-600 px-10 py-2 mt-5 rounded-md text-white'>Activity Completed</button>
+                <button onClick={showToastMessage} className='text-center text-lg font-semibold bg-blue-400 hover:bg-blue-600 px-10 py-2 mt-5 rounded-md text-white items-center'>Activity Completed</button>
                 <ToastContainer />
             </div>
         </div>
