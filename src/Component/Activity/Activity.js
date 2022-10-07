@@ -11,7 +11,7 @@ const Activity = (props) => {
         <div>
             <div className="card w-74 h-100 bg-base-100 shadow-xl">
                 <figure className="px-8 pt-10">
-                    <img style={{height:'120px', width:'200px'}} src={img} alt="Shoes" className="rounded-xl" />
+                    <img style={{ height: '120px', width: '200px' }} src={img ? img : 'No image found'} alt="..." className="rounded-xl" />
                 </figure>
                 <div className="card-body items-center text-center">
                     <h2 className="card-title font-bold">{name}</h2>

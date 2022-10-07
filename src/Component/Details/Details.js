@@ -81,7 +81,7 @@ const Details = (props) => {
                                 onClick={handleClick}
 
                                 value={number}
-                                className='font-medium  bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>{number}s</button>)
+                                className='font-medium  bg-sky-100 hover:bg-blue-500 hover:text-white rounded-full p-2 mr-3'>{number}m</button>)
                         }
                     </div>
                 </div>
